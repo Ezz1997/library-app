@@ -1,13 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library App</title>
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Add new book</h1>
+    <form action="" method="post" id="book-form">
+      <div>
+        <label for="book-name">Name</label>
+        <input id="book-name" name="book-name" type="text" />
+      </div>
+      <div>
+        <label for="book-author">Author</label>
+        <input id="book-author" name="book-author" type="text" />
+      </div>
+      <button type="submit" id="add-book-btn">Add</button>
+    </form>
+  </body>
 </html>

@@ -36,7 +36,7 @@ function createBookCard(book){
   titleElement.textContent = `Title: ${book.title}`;
   authorElement.textContent = `Author: ${book.author}`;
   pagesNumElement.textContent = `Pages Num: ${book.pagesNum}`;
-  isReadElement.textContent = `isRead: ${book.isRead ? true : false}`;
+  isReadElement.textContent = `IsRead: ${book.isRead ? "Yes" : "No"}`;
   
   card.appendChild(titleElement);
   card.appendChild(authorElement);

@@ -1,18 +1,18 @@
 const myLibrary = [];
 
-function Book(name, author) {
+function Book(title, author) {
   if(!new.target){
     throw Error("Use new before creating an object");
   }
 
   this.id = crypto.randomUUID();
-  this.name = name;
+  this.title = title;
   this.author = author;
 }
 
-function addBookToLibrary(bookName, author) {
+function addBookToLibrary(bookTitle, author) {
   // take params, create a book then store it in the array
-  let book = new Book(bookName, author);
+  let book = new Book(bookTitle, author);
   myLibrary.push(book);
 
   console.log(myLibrary);
@@ -29,7 +29,7 @@ function createBookCard(book){
   card.style.height = "300px";
   card.style.width = "300px";
 
-  h1.textContent = `Name: ${book.name}`;
+  h1.textContent = `Title: ${book.title}`;
   p.textContent = `Author: ${book.author}`;
   
   card.appendChild(h1);
@@ -50,6 +50,6 @@ bookForm.addEventListener("submit", (e) => {
   const data = new FormData(e.target);
   const values = Object.fromEntries(data.entries());
 
-  addBookToLibrary(values["book-name"], values["book-author"]);
+  addBookToLibrary(values["book-title"], values["book-author"]);
 });
 

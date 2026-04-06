@@ -7,3 +7,9 @@ form{
 button{
     width: 80px;
 }
+
+#cards-container{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 16px;
+}

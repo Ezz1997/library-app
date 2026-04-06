@@ -16,7 +16,32 @@ function addBookToLibrary(bookName, author) {
   myLibrary.push(book);
 
   console.log(myLibrary);
+  createBookCard(book);
+}
 
+function createBookCard(book){
+  const cardsContainer = document.querySelector("#cards-container");
+  const card = document.createElement("div");
+  const h1 = document.createElement("h1");
+  const p = document.createElement("p");
+
+  card.style.border = "1px solid black";
+  card.style.height = "300px";
+  card.style.width = "300px";
+
+  h1.textContent = `Name: ${book.name}`;
+  p.textContent = `Author: ${book.author}`;
+  
+  card.appendChild(h1);
+  card.appendChild(p);
+
+  cardsContainer.appendChild(card);
+}
+
+function displayAllBooks(){
+  for(let book of myLibrary){
+    createBookCard(book);
+  }
 }
 
 const bookForm = document.querySelector("#book-form");

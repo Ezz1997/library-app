@@ -11,17 +11,23 @@
     <h1>Add new book</h1>
     <form action="" method="post" id="book-form">
       <div>
-        <label for="book-name">Name</label>
-        <input id="book-name" name="book-name" type="text" />
+        <label for="book-title">Title</label>
+        <input id="book-title" name="book-title" type="text" />
       </div>
       <div>
         <label for="book-author">Author</label>
         <input id="book-author" name="book-author" type="text" />
       </div>
+      <div>
+        <label for="pages-num">Number of pages</label>
+        <input id="pages-num" name="pages-num" type="text" />
+      </div>
+      <div>
+        <label for="isRead">Is Read</label>
+        <input id="isRead" name="isRead" type="checkbox" />
+      </div>
       <button type="submit" id="add-book-btn">Add</button>
     </form>
-    <div id="cards-container">
-
-    </div>
+    <div id="cards-container"></div>
   </body>
 </html>

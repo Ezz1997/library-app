@@ -9,11 +9,24 @@ form{
     height: 30px;
     border-radius: 10px;
     border: none;
-    background-color: bisque;
+    background-color: darkseagreen;
 }
 
 .add-btn:hover{
-    background-color: darksalmon;
+    background-color: mediumseagreen;
+    cursor: pointer;
+}
+
+.remove-btn{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: lightcoral;
+}
+
+.remove-btn:hover{
+    background-color: crimson;
     cursor: pointer;
 }
 

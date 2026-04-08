@@ -1,4 +1,4 @@
-const myLibrary = [];
+let myLibrary = new Map();
 
 function Book(title, author, pagesNum, isRead) {
   if(!new.target){
@@ -15,7 +15,7 @@ function Book(title, author, pagesNum, isRead) {
 function addBookToLibrary(bookTitle, author, pagesNum, isRead) {
   // take params, create a book then store it in the array
   let book = new Book(bookTitle, author, pagesNum, isRead);
-  myLibrary.push(book);
+  myLibrary.set(book.id, book);
 
   console.log(myLibrary);
   createBookCard(book);
@@ -23,11 +23,12 @@ function addBookToLibrary(bookTitle, author, pagesNum, isRead) {
 
 function createBookCard(book){
   const cardsContainer = document.querySelector("#cards-container");
-  const card = document.createElement("div");
+  let card = document.createElement("div");
   const titleElement = document.createElement("h1");
   const authorElement = document.createElement("p");
   const pagesNumElement = document.createElement("p");
   const isReadElement = document.createElement("p");
+  const removeButtonElement = document.createElement("button");
 
   card.style.border = "1px solid black";
   card.style.height = "300px";
@@ -37,17 +38,28 @@ function createBookCard(book){
   authorElement.textContent = `Author: ${book.author}`;
   pagesNumElement.textContent = `Pages Num: ${book.pagesNum}`;
   isReadElement.textContent = `IsRead: ${book.isRead ? "Yes" : "No"}`;
+  removeButtonElement.textContent = "Remove";
+
+  removeButtonElement.addEventListener("click", () =>{
+    let bookId = card.getAttribute("data-index-number");
+    myLibrary.delete(bookId);
+    console.log(myLibrary);
+    card.remove();
+  });
   
   card.appendChild(titleElement);
   card.appendChild(authorElement);
   card.appendChild(pagesNumElement);
   card.appendChild(isReadElement);
+  card.appendChild(removeButtonElement);
+
+  card.setAttribute("data-index-number", book.id);
 
   cardsContainer.appendChild(card);
 }
 
 function displayAllBooks(){
-  for(let book of myLibrary){
+  for(let book of myLibrary.values()){
     createBookCard(book);
   }
 }

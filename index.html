@@ -9,8 +9,8 @@
   </head>
   <body style="display: grid; gap: 12px;">
     <h1>Add new book</h1>
-    <button style="width: fit-content" popovertarget="new-book-dialog">
-      Add New Book
+    <button class="add-btn" popovertarget="new-book-dialog">
+      Add Book
     </button>
     <dialog id="new-book-dialog" popover>
       <form action="" method="post" id="book-form" style="margin-bottom: 12px;">
@@ -30,7 +30,7 @@
           <label for="isRead">Is Read</label>
           <input id="isRead" name="isRead" type="checkbox" />
         </div>
-        <button type="submit" id="add-book-btn">Add</button>
+        <button class="add-btn" type="submit" id="add-book-btn">Add</button>
       </form>
       <button popovertarget="new-book-dialog" popovertargetaction="hide">
         Close

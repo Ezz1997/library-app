@@ -4,8 +4,17 @@ form{
     gap: 16px;
 }
 
-button{
-    width: 80px;
+.add-btn{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: bisque;
+}
+
+.add-btn:hover{
+    background-color: darksalmon;
+    cursor: pointer;
 }
 
 #cards-container{

@@ -7,27 +7,35 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body style="display: grid; gap: 12px;">
     <h1>Add new book</h1>
-    <form action="" method="post" id="book-form">
-      <div>
-        <label for="book-title">Title</label>
-        <input id="book-title" name="book-title" type="text" />
-      </div>
-      <div>
-        <label for="book-author">Author</label>
-        <input id="book-author" name="book-author" type="text" />
-      </div>
-      <div>
-        <label for="pages-num">Number of pages</label>
-        <input id="pages-num" name="pages-num" type="text" />
-      </div>
-      <div>
-        <label for="isRead">Is Read</label>
-        <input id="isRead" name="isRead" type="checkbox" />
-      </div>
-      <button type="submit" id="add-book-btn">Add</button>
-    </form>
+    <button style="width: fit-content" popovertarget="new-book-dialog">
+      Add New Book
+    </button>
+    <dialog id="new-book-dialog" popover>
+      <form action="" method="post" id="book-form" style="margin-bottom: 12px;">
+        <div>
+          <label for="book-title">Title</label>
+          <input id="book-title" name="book-title" type="text" />
+        </div>
+        <div>
+          <label for="book-author">Author</label>
+          <input id="book-author" name="book-author" type="text" />
+        </div>
+        <div>
+          <label for="pages-num">Number of pages</label>
+          <input id="pages-num" name="pages-num" type="text" />
+        </div>
+        <div>
+          <label for="isRead">Is Read</label>
+          <input id="isRead" name="isRead" type="checkbox" />
+        </div>
+        <button type="submit" id="add-book-btn">Add</button>
+      </form>
+      <button popovertarget="new-book-dialog" popovertargetaction="hide">
+        Close
+      </button>
+    </dialog>
     <div id="cards-container"></div>
   </body>
 </html>

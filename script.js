@@ -39,6 +39,7 @@ function createBookCard(book){
   pagesNumElement.textContent = `Pages Num: ${book.pagesNum}`;
   isReadElement.textContent = `IsRead: ${book.isRead ? "Yes" : "No"}`;
   removeButtonElement.textContent = "Remove";
+  removeButtonElement.classList.add("remove-btn");
 
   removeButtonElement.addEventListener("click", () =>{
     let bookId = card.getAttribute("data-index-number");

@@ -1,10 +1,14 @@
-form{
-    display:flex; 
-    flex-direction: column; 
+body {
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 100%, rgba(237, 221, 83, 1) 100%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
     gap: 16px;
 }
 
-.add-btn{
+.add-btn {
     width: 100px;
     height: 30px;
     border-radius: 10px;
@@ -12,12 +16,12 @@ form{
     background-color: darkseagreen;
 }
 
-.add-btn:hover{
+.add-btn:hover {
     background-color: mediumseagreen;
     cursor: pointer;
 }
 
-.remove-btn{
+.remove-btn {
     width: 100px;
     height: 30px;
     border-radius: 10px;
@@ -25,13 +29,74 @@ form{
     background-color: lightcoral;
 }
 
-.remove-btn:hover{
+.remove-btn:hover {
     background-color: crimson;
     cursor: pointer;
 }
 
-#cards-container{
+#cards-container {
     display: grid;
     grid-template-columns: repeat(3, 300px);
     gap: 16px;
+}
+
+#new-book-dialog {
+    border: none;
+    border-radius: 28px;
+    height: 350px;
+    width: 400px;
+}
+
+/* From Uiverse.io by barisdogansutcu */
+.btn {
+    width: 130px;
+    padding: 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+.btn:hover {
+    letter-spacing: 3px;
+    color: hsl(0, 0%, 100%);
+}
+
+.btn:active {
+    letter-spacing: 3px;
+    color: hsl(0, 0%, 100%);
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+.add {
+    background-color: darkseagreen;
+}
+
+.add:hover {
+    background-color: mediumseagreen;
+    box-shadow: mediumseagreen 0px 7px 29px 0px;
+}
+
+.add:active {
+    background-color: mediumseagreen;
+    box-shadow: mediumseagreen 0px 0px 0px 0px;
+}
+
+.remove {
+    background-color: lightcoral;
+}
+
+.remove:hover {
+    background-color: crimson;
+    box-shadow: crimson 0px 7px 29px 0px;
+}
+
+.remove:active {
+    background-color: crimson;
+    box-shadow: crimson 0px 0px 0px 0px;
 }

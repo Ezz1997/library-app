@@ -7,13 +7,13 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body style="display: grid; gap: 12px;">
-    <h1>Add new book</h1>
-    <button class="add-btn" popovertarget="new-book-dialog">
-      Add Book
-    </button>
+  <body>
+    <h1 style="text-align: center;">
+      Welcome to Athena — the library of knowledge and wisdom.
+    </h1>
+    <button class="btn add" popovertarget="new-book-dialog">Add Book</button>
     <dialog id="new-book-dialog" popover>
-      <form action="" method="post" id="book-form" style="margin-bottom: 12px;">
+      <form action="" method="post" id="book-form" style="margin-bottom: 12px">
         <div>
           <label for="book-title">Title</label>
           <input id="book-title" name="book-title" type="text" />
@@ -30,9 +30,13 @@
           <label for="isRead">Is Read</label>
           <input id="isRead" name="isRead" type="checkbox" />
         </div>
-        <button class="add-btn" type="submit" id="add-book-btn">Add</button>
+        <button class="btn add" type="submit" id="add-book-btn">Add</button>
       </form>
-      <button class="remove-btn" popovertarget="new-book-dialog" popovertargetaction="hide">
+      <button
+        class="btn remove"
+        popovertarget="new-book-dialog"
+        popovertargetaction="hide"
+      >
         Close
       </button>
     </dialog>

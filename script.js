@@ -59,7 +59,8 @@ function createBookCard(book) {
   checkboxWrapperDiv.append(isReadElement);
 
   removeButtonElement.textContent = "Remove";
-  removeButtonElement.classList.add("remove-btn");
+  removeButtonElement.classList.add("btn");
+  removeButtonElement.classList.add("remove");
 
   removeButtonElement.addEventListener("click", () => {
     const bookId = card.getAttribute("data-index-number");

@@ -6,39 +6,45 @@
     <title>Library App</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
   </head>
   <body>
-    <h1 style="text-align: center;">
+    <h1 style="text-align: center">
       Welcome to Athena — the library of knowledge and wisdom.
     </h1>
     <button class="btn add" popovertarget="new-book-dialog">Add Book</button>
     <dialog id="new-book-dialog" popover>
-      <form action="" method="post" id="book-form" style="margin-bottom: 12px">
-        <div>
-          <label for="book-title">Title</label>
-          <input id="book-title" name="book-title" type="text" required />
-        </div>
-        <div>
-          <label for="book-author">Author</label>
-          <input id="book-author" name="book-author" type="text" required />
-        </div>
-        <div>
-          <label for="pages-num">Number of pages</label>
-          <input id="pages-num" name="pages-num" type="number" required />
-        </div>
-        <div>
-          <label for="isRead">Is Read</label>
-          <input id="isRead" name="isRead" type="checkbox" />
-        </div>
-        <button class="btn add" type="submit" id="add-book-btn">Add</button>
-      </form>
-      <button
-        class="btn remove"
-        popovertarget="new-book-dialog"
-        popovertargetaction="hide"
+      <div
+        style="
+          display: grid;
+          grid-template-rows: 40px 1fr;
+          height: inherit;
+          width: inherit;
+        "
       >
-        Close
-      </button>
+        <button popovertarget="new-book-dialog" popovertargetaction="hide" style="height: fit-content; width: fit-content; justify-self: right; border:none; background-color: white;">
+          <span class="material-symbols-outlined close-btn"> close </span>
+        </button>
+        <form action="" method="post" id="book-form">
+          <div>
+            <input id="book-title" name="book-title" type="text" required placeholder="Title"/>
+          </div>
+          <div>
+            <input id="book-author" name="book-author" type="text" required placeholder="Author"/>
+          </div>
+          <div>
+            <input id="pages-num" name="pages-num" type="number" required placeholder="Number of Pages"/>
+          </div>
+          <div style="display: flex; gap: 6px;">
+            <label for="isRead">Is Read</label>
+            <input id="isRead" name="isRead" type="checkbox"/>
+          </div>
+          <button class="btn add" type="submit" id="add-book-btn">Add</button>
+        </form>
+      </div>
     </dialog>
     <div id="cards-container"></div>
   </body>

@@ -5,7 +5,9 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
 }
 
 .add-btn {
@@ -45,6 +47,7 @@ form {
     border-radius: 28px;
     height: 350px;
     width: 400px;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
 }
 
 /* From Uiverse.io by barisdogansutcu */
@@ -99,4 +102,31 @@ form {
 .remove:active {
     background-color: crimson;
     box-shadow: crimson 0px 0px 0px 0px;
+}
+
+.close-btn {
+    justify-self: right;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.close-btn:hover{
+    color: lightcoral;
+}
+
+form > div > input:is([type="text"], [type="number"]){
+    border: none;
+    border-bottom: 3px solid darkseagreen;
+    border-radius: 5px;
+    width: 200px;
+    height: 20px;
+}
+
+form > div > input:is([type="text"], [type="number"]):focus{
+    border: none;
+    outline: 3px solid darkseagreen;
+}
+
+form > div > input[type="checkbox"]{
+    accent-color: darkseagreen;
 }

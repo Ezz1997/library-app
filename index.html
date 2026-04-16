@@ -17,30 +17,45 @@
     </h1>
     <button class="btn add" popovertarget="new-book-dialog">Add Book</button>
     <dialog id="new-book-dialog" popover>
-      <div
-        style="
-          display: grid;
-          grid-template-rows: 40px 1fr;
-          height: inherit;
-          width: inherit;
-        "
-      >
-        <button popovertarget="new-book-dialog" popovertargetaction="hide" style="height: fit-content; width: fit-content; justify-self: right; border:none; background-color: white;">
-          <span class="material-symbols-outlined close-btn"> close </span>
+      <div class="close-btn-container">
+        <button
+          popovertarget="new-book-dialog"
+          popovertargetaction="hide"
+          class="close-btn"
+        >
+          <span class="material-symbols-outlined close-btn-span"> close </span>
         </button>
         <form action="" method="post" id="book-form">
           <div>
-            <input id="book-title" name="book-title" type="text" required placeholder="Title"/>
+            <input
+              id="book-title"
+              name="book-title"
+              type="text"
+              required
+              placeholder="Title"
+            />
           </div>
           <div>
-            <input id="book-author" name="book-author" type="text" required placeholder="Author"/>
+            <input
+              id="book-author"
+              name="book-author"
+              type="text"
+              required
+              placeholder="Author"
+            />
           </div>
           <div>
-            <input id="pages-num" name="pages-num" type="number" required placeholder="Number of Pages"/>
+            <input
+              id="pages-num"
+              name="pages-num"
+              type="number"
+              required
+              placeholder="Number of Pages"
+            />
           </div>
-          <div style="display: flex; gap: 6px;">
+          <div style="display: flex; gap: 6px">
             <label for="isRead">Is Read</label>
-            <input id="isRead" name="isRead" type="checkbox"/>
+            <input id="isRead" name="isRead" type="checkbox" />
           </div>
           <button class="btn add" type="submit" id="add-book-btn">Add</button>
         </form>

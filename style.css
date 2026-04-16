@@ -169,3 +169,18 @@ form>div>input[type="checkbox"] {
     height: inherit;
     width: inherit;
 }
+
+h1, h2 {
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.playfair-display-style {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+

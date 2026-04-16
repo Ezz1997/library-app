@@ -12,7 +12,7 @@ function Book(title, author, pagesNum, isRead) {
   this.isRead = isRead;
 }
 
-Book.prototype.toggleReadStatus = function(){
+Book.prototype.toggleReadStatus = function () {
   this.isRead = !this.isRead;
 };
 
@@ -28,7 +28,7 @@ function addBookToLibrary(bookTitle, author, pagesNum, isRead) {
 function createBookCard(book) {
   const cardsContainer = document.querySelector("#cards-container");
   let card = document.createElement("div");
-  const titleElement = document.createElement("h1");
+  const titleElement = document.createElement("h2");
   const authorElement = document.createElement("p");
   const pagesNumElement = document.createElement("p");
   const isReadElement = document.createElement("input");
@@ -36,11 +36,9 @@ function createBookCard(book) {
   const checkboxWrapperDiv = document.createElement("div");
   const checkBoxLabel = document.createElement("label");
 
-  card.style.border = "1px solid black";
-  card.style.height = "300px";
-  card.style.width = "300px";
+  card.classList.add("card-style");
 
-  titleElement.textContent = `Title: ${book.title}`;
+  titleElement.textContent = book.title;
   authorElement.textContent = `Author: ${book.author}`;
   pagesNumElement.textContent = `Pages Num: ${book.pagesNum}`;
 
@@ -95,4 +93,16 @@ bookForm.addEventListener("submit", (e) => {
   addBookToLibrary(values["book-title"], values["book-author"],
     values["pages-num"], values["isRead"]);
 });
+
+function initLibrary() {
+  // read
+  addBookToLibrary("Crime and Punishment", "Fyodor Dostoevsky", 527, true);
+  addBookToLibrary("Kafka on the Shore", "Haruki Murakami", 505, true);
+  addBookToLibrary("The Silent Patient", "Alex Michaelides", 336, true);
+  addBookToLibrary("Animal Farm", "George Orwell", 112, true);
+  addBookToLibrary("Meditations", "Marcus Aurelius", 254, true);
+  addBookToLibrary("1984", "George Orwell", 328, true);
+}
+
+initLibrary();
 

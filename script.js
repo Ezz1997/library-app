@@ -47,6 +47,7 @@ function createBookCard(book) {
 
   isReadElement.type = "checkbox";
   isReadElement.id = "isReadElement";
+  isReadElement.style.accentColor = "darkseagreen";
   isReadElement.checked = book.isRead;
 
   isReadElement.addEventListener("click", (e) => {

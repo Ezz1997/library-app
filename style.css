@@ -1,5 +1,7 @@
 body {
     background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 100%, rgba(237, 221, 83, 1) 100%);
+    display: grid;
+    gap: 16px;
 }
 
 form {
@@ -39,7 +41,28 @@ form {
 #cards-container {
     display: grid;
     grid-template-columns: repeat(3, 300px);
-    gap: 16px;
+    gap: 32px;
+    width: max-content;
+    justify-self: center;
+    padding: 32px;
+}
+
+.card-style {
+    box-sizing: border-box;
+    border: none;
+    border-radius: 30px;
+    height: 350px;
+    width: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+    overflow-wrap: anywhere;
+    overflow: auto;
 }
 
 #new-book-dialog {
@@ -47,7 +70,7 @@ form {
     border-radius: 28px;
     height: 350px;
     width: 400px;
-    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* From Uiverse.io by barisdogansutcu */
@@ -78,6 +101,7 @@ form {
 
 .add {
     background-color: darkseagreen;
+    justify-self: center;
 }
 
 .add:hover {
@@ -105,16 +129,24 @@ form {
 }
 
 .close-btn {
+    height: fit-content;
+    width: fit-content;
+    justify-self: right;
+    border: none;
+    background-color: white;
+}
+
+.close-btn-span {
     justify-self: right;
     margin: 8px;
     cursor: pointer;
 }
 
-.close-btn:hover{
+.close-btn-span:hover {
     color: lightcoral;
 }
 
-form > div > input:is([type="text"], [type="number"]){
+form>div>input:is([type="text"], [type="number"]) {
     border: none;
     border-bottom: 3px solid darkseagreen;
     border-radius: 5px;
@@ -122,11 +154,18 @@ form > div > input:is([type="text"], [type="number"]){
     height: 20px;
 }
 
-form > div > input:is([type="text"], [type="number"]):focus{
+form>div>input:is([type="text"], [type="number"]):focus {
     border: none;
     outline: 3px solid darkseagreen;
 }
 
-form > div > input[type="checkbox"]{
+form>div>input[type="checkbox"] {
     accent-color: darkseagreen;
+}
+
+.close-btn-container {
+    display: grid;
+    grid-template-rows: 40px 1fr;
+    height: inherit;
+    width: inherit;
 }

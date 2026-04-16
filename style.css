@@ -95,7 +95,7 @@ form {
 .btn:active {
     letter-spacing: 3px;
     color: hsl(0, 0%, 100%);
-    transform: translateY(10px);
+    transform: translateY(5px);
     transition: 100ms;
 }
 
